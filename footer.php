@@ -1,4 +1,4 @@
-		</div><!-- .wrapper -->
+		</div><!-- .container -->
 	</main><!-- main -->
 	<footer role="contentinfo">
 		<section class="main-footer">

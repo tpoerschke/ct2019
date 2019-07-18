@@ -49,4 +49,4 @@
 			<?php endif; ?>
 		</header><!-- header -->
 		<main role="main">
-			<div class="wrapper">
+			<div class="container">
