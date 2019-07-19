@@ -26,8 +26,17 @@ html {
   }
 }
 
+// header
+header {
+  #blog-title {
+    display: block;
+    text-align: center;
+  }
+}
+
 // POSTS ----
 .blogpost {
+  margin-top: map-get($spacers, 5);
 
   .title {
     margin-bottom: $spacer;
@@ -46,7 +55,7 @@ html {
     content: '';
     display: block;
     background: $secondary;
-    height: 1px;
+    height: 2px;
     width: 100px;
     margin-bottom: $spacer * 1.5;
   }

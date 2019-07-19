@@ -1,6 +1,6 @@
 <section class="blogpost-list">
    <?php while (have_posts()) : the_post(); ?>
-      <article class="blogpost mt-5">
+      <article class="blogpost">
          <h2 class="title"> <a href="<?php the_permalink() ?>"><?php the_title(); ?> </a> </h2>
          <?php if (has_post_thumbnail()) : ?>
             <img class='thumbnail' src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>"/>
