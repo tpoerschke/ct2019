@@ -29,18 +29,15 @@
 
 	<body <?php body_class(); ?>>
 		<!-- main-nav -->
-		<nav id="main_nav" role="navigation">
+		<nav class="navbar" role="navigation">
+			<a href="<?php bloginfo('url'); ?>">
+				<img id="blog-logo" src="<?php assetsPath('image'); ?>/header1.png" width="40" height="40" />
+			</a>
+			<form role="search" method="get" id="searchform-1" class="searchform form-inline" action="<?php bloginfo('url'); ?>">
+				<input type="text" class="form-control mr-2" value="" placeholder="Suchbegriff..." name="s" />
+				<button type="submit" class="btn btn-outline-secondary"><img src="<?php assetsPath('image'); ?>/loupe1.png" alt="Suche" height="20" width="20" /></button>
+			</form>
 		</nav><!-- nav -->
-		<div class="top-banner">
-			<img id="blog-logo" src="<?php assetsPath('image'); ?>/header1.png" />
-			<div class="search-container ct-search-container">
-				<form role="search" method="get" id="searchform-1" class="searchform" action="<?php bloginfo('url'); ?>">
-					<input type="text" value="" placeholder="Suchbegriff..." name="s" id="s" />
-					<button type="submit"><img src="<?php assetsPath('image'); ?>/loupe1.png" alt="Suche" height="20" width="20" /></button>
-				</form>
-			</div>
-			<img id="menu-btn" src="<?php assetsPath('image'); ?>/menu0.png" />
-		</div>
 		<header role="banner">
 			<?php if(is_singular()): ?>
 				<span id="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></span>
