@@ -34,6 +34,34 @@ header {
   }
 }
 
+// Pagination
+.pagination {
+  margin: {
+    top: map-get($spacers, 5);
+    right: 0;
+    bottom: map-get($spacers, 5);
+    left: 0;
+  };
+
+  border: 2px solid $secondary;
+  display: inline-block;
+
+  .page-numbers {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: map-get($spacers, 2);
+    }
+  }
+
+  .screen-reader-text {
+    display: none;
+  }
+}
+
 // POSTS ----
 .blogpost {
   margin-top: map-get($spacers, 5);
