@@ -6,9 +6,7 @@
          <span class="post-date"><time><?php echo $postDate ?></time></span>
          <!-- TODO: h2 -> h1 ? -->
          <h2 class="title" itemprop="headline"><?php the_title(); ?></h2>
-			<?php if(has_post_thumbnail()) : ?>
-				<img class='thumbnail' src="<?php the_post_thumbnail_url('full'); ?>" alt="[Thumbnail] <?php the_title(); ?>" itemprop="thumbnail" />
-			<?php endif; ?>
+			<?php get_template_part('template-parts/post/thumbnail'); ?>
 			<div id="anti-blocker"></div>
 			<div itemprop="articleBody">
 				<?php the_content(); ?>
