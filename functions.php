@@ -1,6 +1,6 @@
 <?php
 /**
- * ct2018
+ * ct2019
  * Functions und co.
  */
 
@@ -62,7 +62,7 @@ function widgets_init() {
 	register_sidebar( array(
         'name' => __( '3. Fu&#xdf;bereich (Widgets)'),
         'id' => 'third-footer-widget-area',
-        'description' => __( '4. Bereich f&uuml;r Widgets innerhalb des Footer. HINWEIS: Sollte nur f&uuml;r Icons benutzt werden!'),
+        'description' => __( '3. Bereich f&uuml;r Widgets innerhalb des Footer. HINWEIS: Sollte nur f&uuml;r Icons benutzt werden!'),
         'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
         'after_widget' => '</li>',
         'before_title' => '<div class="widget-title">',
@@ -76,7 +76,7 @@ add_action( 'widgets_init', 'widgets_init' );
 $args = array(
 	'width'         => 100,
 	'height'        => 100,
-	'default-image' => get_template_directory_uri() . '/img/header1.png',
+	'default-image' => get_template_directory_uri() . 'assets/img/header1.png',
 );
 add_theme_support( 'custom-header', $args );
 
