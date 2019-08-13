@@ -31,10 +31,11 @@ function assetsPath($assetType) {
 
 // THEME SUPPORT UND INITIALISIERUNG
 // TODO: alles in eine init-Funktion schreiben ?
-register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'ct2019'),
-    'secondary' => __( 'Secondary Menu', 'ct2019' ),
- ) );
+register_nav_menus(array(
+	'primary' => __('Primary Menu', 'ct2019'),
+  'footerMenu' => __('Footer Menu', 'ct2019'),
+	'navbarMenu' => __('Navbar Menu', 'ct2019')
+));
 
 function widgets_init() {
 

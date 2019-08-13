@@ -26,10 +26,9 @@
 				</div> <!-- .widget-area -->
 			<?php endif; ?>
 			<?php wp_nav_menu(array(
-				//'menu_class' => 'menu',
-				'container_id' => 'secondary_menu',
+				'container_id' => 'footer-menu',
 				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-				'theme_location' => 'secondary'
+				'theme_location' => 'footerMenu'
 				)
 			); ?>
 			<span class="themeinfo"> &copy; Created by Tim Poerschke | Proudly powered by <a href="http://www.wordpress.org"> Wordpress</a> </span>
