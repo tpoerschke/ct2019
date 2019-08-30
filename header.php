@@ -29,21 +29,23 @@
 
 	<body <?php body_class(); ?>>
 		<!-- main-nav -->
-		<nav class="navbar" role="navigation">
-			<a href="<?php bloginfo('url'); ?>">
+		<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+			<a href="<?php bloginfo('url'); ?>" class="navbar-brand">
 				<img id="blog-logo" src="<?php assetsPath('image'); ?>/header1.png" width="40" height="40" />
 			</a>
-			<form role="search" method="get" id="searchform-1" class="searchform form-inline" action="<?php bloginfo('url'); ?>">
-				<input type="text" class="form-control mr-2" value="" placeholder="Suchbegriff..." name="s" />
-				<button type="submit" class="btn btn-outline-secondary"><img src="<?php assetsPath('image'); ?>/loupe1.png" alt="Suche" height="20" width="20" /></button>
-			</form>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+		 	<div class="collapse navbar-collapse" id="navbarNav">
+				<?php wp_nav_menu([
+					'theme_location' => 'navbarMenu',
+					'container' => false,
+					'container_id' => 'main-nav',
+					'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>'
+				]); ?>
+			</div>
 		</nav><!-- nav -->
 		<header role="banner">
-			<?php if(is_singular()): ?>
-				<span id="blog-title" class="h1"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></span>
-			<?php else: ?>
-				<h1 id="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-			<?php endif; ?>
 		</header><!-- header -->
 		<main role="main">
 			<div class="container">
