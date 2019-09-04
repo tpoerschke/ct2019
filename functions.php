@@ -7,12 +7,12 @@
 // FUNKTIONEN
 // Gibt den Paginator aus
 function show_pagination() {
-		the_posts_pagination(array(
-			'type'               => 'list',
-			'prev_text'          => '&laquo; Zur&uuml;ck',
-			'next_text'          => 'Weiter &raquo;',
-			'screen_reader_text' => ' '
-		));
+	the_posts_pagination([
+		'type'               => 'list',
+		'prev_text'          => '&laquo; Zur&uuml;ck',
+		'next_text'          => 'Weiter &raquo;',
+		'screen_reader_text' => ' '
+	]);
 }
 
 // Hilft dabei, die Verzeichnisse aller assets
@@ -61,40 +61,39 @@ add_filter('nav_menu_link_attributes', 'add_bootstrap_atts', 10, 3);
 
 function widgets_init() {
 
-    register_sidebar( array(
-        'name' => __( '1. Fu&#xdf;bereich (Widgets)'),
+    register_sidebar([
+        'name' => __('1. Fu&#xdf;bereich (Widgets)'),
         'id' => 'first-footer-widget-area',
-        'description' => __( '1. Bereich f&uuml;r Widgets innerhalb des Footer'),
+        'description' => __('1. Bereich f&uuml;r Widgets innerhalb des Footer'),
         'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
         'after_widget' => '</li>',
         'before_title' => '<div class="widget-title">',
         'after_title' => '</div>',
-    ) );
+    ]);
 
-	register_sidebar( array(
-        'name' => __( '2. Fu&#xdf;bereich (Widgets)'),
+	register_sidebar([
+        'name' => __('2. Fu&#xdf;bereich (Widgets)'),
         'id' => 'second-footer-widget-area',
-        'description' => __( '2. Bereich f&uuml;r Widgets innerhalb des Footer'),
+        'description' => __('2. Bereich f&uuml;r Widgets innerhalb des Footer'),
         'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
         'after_widget' => '</li>',
         'before_title' => '<div class="widget-title">',
         'after_title' => '</div>',
-    ) );
+    ]);
 
-
-	register_sidebar( array(
-        'name' => __( '3. Fu&#xdf;bereich (Widgets)'),
+	register_sidebar([
+        'name' => __('3. Fu&#xdf;bereich (Widgets)'),
         'id' => 'third-footer-widget-area',
-        'description' => __( '3. Bereich f&uuml;r Widgets innerhalb des Footer. HINWEIS: Sollte nur f&uuml;r Icons benutzt werden!'),
+        'description' => __('3. Bereich f&uuml;r Widgets innerhalb des Footer. HINWEIS: Sollte nur f&uuml;r Icons benutzt werden!'),
         'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
         'after_widget' => '</li>',
         'before_title' => '<div class="widget-title">',
         'after_title' => '</div>',
-    ) );
+    ]);
 }
 
-add_action( 'widgets_init', 'widgets_init' );
+add_action('widgets_init', 'widgets_init');
 
 // Damit Beitragsbilder möglich sind.
 // TODO: ggf. entfernen
-add_theme_support( 'post-thumbnails' );
+add_theme_support('post-thumbnails');
