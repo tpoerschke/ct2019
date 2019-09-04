@@ -95,14 +95,6 @@ function widgets_init() {
 
 add_action( 'widgets_init', 'widgets_init' );
 
-// Für den Header
-$args = array(
-	'width'         => 100,
-	'height'        => 100,
-	'default-image' => get_template_directory_uri() . 'assets/img/header1.png',
-);
-add_theme_support( 'custom-header', $args );
-
 // Damit Beitragsbilder möglich sind.
 // TODO: ggf. entfernen
 add_theme_support( 'post-thumbnails' );
