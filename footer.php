@@ -56,6 +56,10 @@
 			showBlockerInfo();
 		}
 
+		$('#scroll-down-arrow').on('click', () => {
+			$(window).scrollTop($(window).height());
+		})
+
 		function showBlockerInfo() {
 			$('#anti-blocker').addClass('info');
 			$('#anti-blocker').addClass('error');

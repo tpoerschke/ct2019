@@ -3,6 +3,7 @@ html {
   // Bootstrap übernimmt diesen Wert
   // über die rems...
   font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 1200px) {
@@ -87,6 +88,17 @@ body.home {
 
   .page-content {
     margin-top: 100vh;
+  }
+
+  #scroll-down-arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    opacity: 0.8;
+    cursor: pointer;
   }
 }
 
